@@ -1,2 +1,0 @@
-choose the best option is colled recursion
-and an easy turms we can say that colling function on his on is colled recurtions
