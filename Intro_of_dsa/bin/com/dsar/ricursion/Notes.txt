@@ -8,9 +8,15 @@ class Solution{
     return permuteHelper(numSet);
 }
 
-ion);
-        }
+public List<List<Integer>> permuteHelper(Set<Integer> numSet){
+    int n = numSet.size();
+    List<List<Integer>> result = new ArrayList<>();
+    if(n == 0){
+        return Collections.singletonList(Collections.emptyList());
+    } else if(n == 1){
+        result.add(new ArrayList<>(numSet));
+        return result;
     }
-    return result;
-}
-}
+    Set<Integer> recursionSet = new HashSet<>(numSet);
+    for(Integer i : numSet){
+        re
