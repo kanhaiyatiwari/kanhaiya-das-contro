@@ -15,8 +15,6 @@ public List<List<Integer>> permuteHelper(Set<Integer> numSet){
         return Collections.singletonList(Collections.emptyList());
     } else if(n == 1){
         result.add(new ArrayList<>(numSet));
-        return result;
-    }
-    Set<Integer> recursionSet = new HashSet<>(numSet);
-    for(Integer i : numSet){
-        re
+t;
+}
+}
