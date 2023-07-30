@@ -15,6 +15,18 @@ public List<List<Integer>> permuteHelper(Set<Integer> numSet){
         return Collections.singletonList(Collections.emptyList());
     } else if(n == 1){
         result.add(new ArrayList<>(numSet));
-t;
+        return result;
+    }
+    Set<Integer> recursionSet = new HashSet<>(numSet);
+    for(Integer i : numSet){
+        recursionSet.remove(i);
+        List<List<Integer>> subpermutationList = permuteHelper(recursionSet);
+        recursionSet.add(i);
+        for(List<Integer> subpermutation : subpermutationList){
+            subpermutation.add(i);
+            result.add(subpermutation);
+        }
+    }
+    return result;
 }
 }
